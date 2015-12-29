@@ -65,7 +65,6 @@ var customerScema = new Schema({
 	isActive: {type: Boolean, default: true}
 });
 ```
-
 ### Allowed Data Types
 
 - String
