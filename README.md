@@ -40,6 +40,32 @@ var customerSchema = new Schema({
 var simpleSchema = new Schema({fieldName: schemaType});
 ```
 
+```javascript
+var mongoose = require('mongoose');
+var Schema = mongoose.Schema;
+
+// child adress schema...
+var addressSchema = new Schema({
+	type: String,
+	street: String,
+	city: String,
+	state: String,
+	country: String,
+	postalCode: Number
+});
+
+// parent customer schema...
+var customerScema = new Schema({
+	name: {
+		first: String,
+		last: String
+	},
+	address: [addressSchema],
+	createdOn: {type: Date, default: Date.now},
+	isActive: {type: Boolean, default: true}
+});
+```
+
 ### Allowed Data Types
 
 - String
