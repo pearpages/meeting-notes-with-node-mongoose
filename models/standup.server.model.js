@@ -1,6 +1,7 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
+// Notes Schema definition
 var standupSchema = new Schema({
 	memberName: String,
 	project: String,
@@ -10,3 +11,5 @@ var standupSchema = new Schema({
 	createdOn: {type: Date, default: Date.now}
 });
 
+// export the model
+module.exports = mongoose.model('Standup', standupSchema);
