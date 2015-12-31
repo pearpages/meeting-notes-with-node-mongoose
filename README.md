@@ -1,5 +1,9 @@
 # Node Meetings Notes
 
+This project has the sole purpose of seeing mongoose in action.
+
+## Tools
+
 * Bootstrap
 * Nodemon
 * Postman
